@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e2eaf500-de9f-49f6-8405-708d0096eb78}</ProjectGuid>
+    <RootNamespace>TraductorLenguajeNatural</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>xcopy /Y /I /E "$(ProjectDir)config" "$(OutDir)config\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>xcopy /Y /I /E "$(ProjectDir)config" "$(OutDir)config\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>xcopy /Y /I /E "$(ProjectDir)config" "$(OutDir)config\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <PostBuildEvent>
+      <Command>xcopy /Y /I /E "$(ProjectDir)config" "$(OutDir)config\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Traductor_Lenguaje_Natural.h" />
+    <ClInclude Include="src\compiler\lexer\Token.h" />
+    <ClInclude Include="src\compiler\lexer\LexicalAnalyzer.h" />
+    <ClInclude Include="src\compiler\symbols\Symbol.h" />
+    <ClInclude Include="src\compiler\symbols\SymbolTable.h" />
+    <ClInclude Include="src\compiler\syntax\Ast.h" />
+    <ClInclude Include="src\compiler\syntax\Parser.h" />
+    <ClInclude Include="src\compiler\semantic\SemanticAnalyzer.h" />
+    <ClInclude Include="src\nl2sql\SchemaMapper.h" />
+    <ClInclude Include="src\nl2sql\JoinResolver.h" />
+    <ClInclude Include="src\nl2sql\SlotFiller.h" />
+    <ClInclude Include="src\nl2sql\NlTokenizer.h" />
+    <ClInclude Include="src\ui\StringConvert.h" />
+    <ClInclude Include="src\ui\MainWindow.h" />
+    <ClInclude Include="src\ui\menus\AnalisisLexicoPanel.h" />
+    <ClInclude Include="src\ui\menus\TablaSimbolosPanel.h" />
+    <ClInclude Include="src\ui\menus\InstruccionesPanel.h" />
+    <ClInclude Include="src\ui\ErrorPanel.h" />
+    <ClInclude Include="src\ui\configuraciones\ConfiguracionBasePanel.h" />
+    <ClInclude Include="src\ui\configuraciones\DmlConfigPanel.h" />
+    <ClInclude Include="src\ui\configuraciones\DdlConfigPanel.h" />
+    <ClInclude Include="src\ui\configuraciones\FiltrosNlConfigPanel.h" />
+    <ClInclude Include="src\ui\configuraciones\OperadoresNlConfigPanel.h" />
+    <ClInclude Include="src\ui\configuraciones\EsquemaBaseConfigPanel.h" />
+    <ClInclude Include="src\ui\configuraciones\RelacionesConfigPanel.h" />
+    <ClInclude Include="src\ui\configuraciones\ConfiguracionesManager.h" />
+    <ClInclude Include="src\errors\ErrorDictionary.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Traductor_Lenguaje_Natural.cpp" />
+    <ClCompile Include="src\compiler\lexer\LexicalAnalyzer.cpp" />
+    <ClCompile Include="src\compiler\symbols\SymbolTable.cpp" />
+    <ClCompile Include="src\compiler\syntax\Parser.cpp" />
+    <ClCompile Include="src\compiler\semantic\SemanticAnalyzer.cpp" />
+    <ClCompile Include="src\nl2sql\SchemaMapper.cpp" />
+    <ClCompile Include="src\nl2sql\JoinResolver.cpp" />
+    <ClCompile Include="src\nl2sql\SlotFiller.cpp" />
+    <ClCompile Include="src\nl2sql\NlTokenizer.cpp" />
+    <ClCompile Include="src\ui\StringConvert.cpp" />
+    <ClCompile Include="src\ui\MainWindow.cpp" />
+    <ClCompile Include="src\ui\menus\AnalisisLexicoPanel.cpp" />
+    <ClCompile Include="src\ui\menus\TablaSimbolosPanel.cpp" />
+    <ClCompile Include="src\ui\menus\InstruccionesPanel.cpp" />
+    <ClCompile Include="src\ui\ErrorPanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\ConfiguracionBasePanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\DmlConfigPanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\DdlConfigPanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\FiltrosNlConfigPanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\OperadoresNlConfigPanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\EsquemaBaseConfigPanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\RelacionesConfigPanel.cpp" />
+    <ClCompile Include="src\ui\configuraciones\ConfiguracionesManager.cpp" />
+    <ClCompile Include="src\errors\ErrorDictionary.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config\schema_master.json" />
+    <None Include="config\dictionary_errors.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Traductor_Lenguaje_Natural.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="Traductor_Lenguaje_Natural.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

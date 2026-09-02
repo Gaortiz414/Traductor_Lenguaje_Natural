@@ -1,0 +1,177 @@
+{
+  "configuracion_lexica": {
+    "filtros_nl": {
+      "TOKEN_IGNORE": [
+        "los",
+        "las",
+        "el",
+        "la",
+        "un",
+        "una",
+        "datos",
+        "por favor",
+        "porfavor",
+        "hola"
+      ]
+    },
+    "operadores_nl": {
+      "TOKEN_DISTINTO_QUE": [
+        "!=",
+        "<>",
+        "distinto de",
+        "diferente de"
+      ],
+      "TOKEN_EMPIEZA_POR": [
+        "LIKE_PREFIX",
+        "empieza por",
+        "comienza con"
+      ],
+      "TOKEN_IGUAL_QUE": [
+        "=",
+        "igual a",
+        "es"
+      ],
+      "TOKEN_IN": [
+        "IN",
+        "en",
+        "esta en"
+      ],
+      "TOKEN_LIKE": [
+        "like",
+        "coincida con",
+        "contiene",
+        "como"
+      ],
+      "TOKEN_MAYOR_IGUAL_QUE": [
+        ">=",
+        "mayor o igual a"
+      ],
+      "TOKEN_MAYOR_QUE": [
+        ">",
+        "mayor a",
+        "mayor que",
+        "mas de"
+      ],
+      "TOKEN_MENOR_IGUAL_QUE": [
+        "<=",
+        "menor o igual a"
+      ],
+      "TOKEN_MENOR_QUE": [
+        "<",
+        "menor a",
+        "menor que",
+        "menos de"
+      ],
+      "TOKEN_NOT_IN": [
+        "NOT IN",
+        "no en",
+        "no esta en"
+      ],
+      "TOKEN_TERMINA_CON": [
+        "LIKE_SUFFIX",
+        "termina con",
+        "finaliza con"
+      ]
+    },
+    "palabras_reservadas": {
+      "DDL": {
+        "TOKEN_CREATE": [
+          "create",
+          "crear",
+          "generar"
+        ]
+      },
+      "DML": {
+        "TOKEN_AND": [
+          "and",
+          "y"
+        ],
+        "TOKEN_FROM": [
+          "de"
+        ],
+        "TOKEN_OR": [
+          "or",
+          "o"
+        ],
+        "TOKEN_SELECT": [
+          "mostrar"
+        ],
+        "TOKEN_WHERE": [
+          "where",
+          "donde",
+          "cuyo",
+          "cuya"
+        ]
+      }
+    }
+  },
+  "esquema_base": {
+    "tablas": [
+      {
+        "alias_nl": [
+          "compradores",
+          "usuarios",
+          "cliente",
+          "comprador"
+        ],
+        "columnas": [
+          {
+            "alias_nl": [
+              "codigo"
+            ],
+            "id_canonico": "id_cliente",
+            "tipo_dato": "int"
+          },
+          {
+            "alias_nl": [
+              "nombres"
+            ],
+            "id_canonico": "nombre",
+            "tipo_dato": "varchar"
+          },
+          {
+            "alias_nl": [
+              "teléfono",
+              "celular"
+            ],
+            "id_canonico": "telefono",
+            "tipo_dato": "int"
+          }
+        ],
+        "id_canonico": "clientes"
+      },
+      {
+        "alias_nl": [
+          "facturas",
+          "transacciones",
+          "factura",
+          "venta"
+        ],
+        "columnas": [
+          {
+            "alias_nl": [],
+            "id_canonico": "id_cliente",
+            "tipo_dato": "int"
+          },
+          {
+            "alias_nl": [
+              "venta",
+              "total"
+            ],
+            "id_canonico": "monto",
+            "tipo_dato": "decimal"
+          }
+        ],
+        "id_canonico": "ventas"
+      }
+    ]
+  },
+  "relaciones": [
+    {
+      "condicion_join": "ventas.id_cliente = clientes.id_cliente",
+      "destino": "clientes",
+      "origen": "ventas",
+      "tipo_default": "INNER JOIN"
+    }
+  ]
+}

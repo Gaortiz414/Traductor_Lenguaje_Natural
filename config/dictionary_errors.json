@@ -1,0 +1,31 @@
+{
+  "errores": {
+    "LEX001": "Caracter ilegal ('{detalle}')",
+    "LEX002": "Identificador delimitado sin cerrar",
+    "LEX003": "Cadena de texto sin cerrar",
+
+    "SYN001": "Se esperaba {detalle}",
+    "SYN002": "Se esperaba un operador de comparacion",
+    "SYN003": "Se esperaba el inicio de una sentencia (SELECT, INSERT, UPDATE, DELETE o CREATE TABLE)",
+
+    "SEM001": "La tabla '{detalle}' no esta declarada",
+    "SEM002": "La tabla '{detalle}' ya esta declarada",
+    "SEM003": "El numero de columnas no coincide con el numero de valores en INSERT",
+
+    "NL001": "No se reconocio una accion (select/dame/traeme/mostrar) en la frase",
+    "NL002": "No se reconocio la tabla: falta 'de'/'from'/'desde' en la frase",
+    "NL003": "No se reconocio ninguna tabla del esquema despues de 'de'/'from'/'desde'",
+    "NL004": "Palabra no reconocida: '{detalle}'. No es una columna conocida ni una palabra ignorada.",
+    "NL005": "Orden invalido: las columnas deben ir antes de 'de'/'desde' y la tabla. Ejemplo correcto: 'muestra nombres desde clientes'",
+    "NL006": "Palabra no reconocida despues de la tabla: '{detalle}'. Si quieres filtrar resultados, usa la sintaxis 'donde <columna> <operador> <valor>', ej: 'donde nombre es pedro'.",
+    "NL007": "Se esperaba una condicion despues de 'donde'/'where'",
+    "NL008": "No se reconocio la columna de la condicion: '{detalle}'",
+    "NL009": "No se reconocio el operador de la condicion",
+    "NL010": "Se esperaba un valor despues del operador de la condicion",
+    "NL011": "Se esperaba una condicion despues de 'y'/'o'",
+    "NL012": "Palabra no reconocida despues de la condicion: '{detalle}'. Si quieres agregar otra condicion, usa 'y' u 'o', ej: 'cuyo nombre es juan y codigo es 1'.",
+
+    "SCHEMA001": "No se pudo cargar config\\schema_master.json (JSON maestro NL2SQL).",
+    "GEN001": "Se encontraron errores. Revisa la tabla de errores."
+  }
+}

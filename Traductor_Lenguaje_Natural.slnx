@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Traductor_Lenguaje_Natural.vcxproj" Id="e2eaf500-de9f-49f6-8405-708d0096eb78" />
+</Solution>

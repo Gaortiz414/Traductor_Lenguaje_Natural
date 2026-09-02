@@ -1,0 +1,53 @@
+#pragma once
+
+#include <string_view>
+#include <cstddef>
+
+namespace compiler::lexer {
+
+enum class TokenType {
+
+    TOKEN_SELECT, TOKEN_FROM, TOKEN_WHERE, TOKEN_INSERT, TOKEN_INTO,
+    TOKEN_VALUES, TOKEN_UPDATE, TOKEN_SET, TOKEN_DELETE, TOKEN_JOIN,
+    TOKEN_INNER, TOKEN_LEFT, TOKEN_RIGHT, TOKEN_ON, TOKEN_AND, TOKEN_OR,
+    TOKEN_ORDER, TOKEN_BY, TOKEN_GROUP, TOKEN_HAVING,
+
+    TOKEN_CREATE, TOKEN_TABLE, TOKEN_ALTER, TOKEN_DROP,
+
+    TOKEN_CONSTRAINT,
+    TOKEN_MODIFIER,
+
+    TOKEN_IDENTIFIER,
+    TOKEN_IDENTIFIER_DELIM,
+    TOKEN_NUMBER,
+    TOKEN_STRING,
+
+    TOKEN_IGUAL,
+    TOKEN_DISTINTO,
+    TOKEN_MAYOR,
+    TOKEN_MAYOR_IGUAL,
+    TOKEN_MENOR,
+    TOKEN_MENOR_IGUAL,
+    TOKEN_LIKE,
+    TOKEN_IN,
+    TOKEN_NOT,
+
+    TOKEN_COMA,
+    TOKEN_PUNTO,
+    TOKEN_PUNTO_Y_COMA,
+    TOKEN_PARENTESIS_IZQ,
+    TOKEN_PARENTESIS_DER,
+    TOKEN_ASTERISCO,
+
+    TOKEN_EOF,
+    TOKEN_ERROR
+};
+
+struct Token {
+    TokenType type;
+    std::string_view lexeme;
+    size_t line;
+    size_t column;
+};
+
+}
